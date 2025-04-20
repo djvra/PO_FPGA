@@ -1,0 +1,36 @@
+transcript on
+if ![file isdirectory po_fpga_iputf_libs] {
+	file mkdir po_fpga_iputf_libs
+}
+
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+
+
+vlog "C:/Users/plankton/Desktop/PO/fpga/8/my_clock_sim/my_clock.vo"
+
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/signed_adder_substractor.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/datapath.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/control_unit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/po_fpga_simulation.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/integer_comparator.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/integer_divider.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/integer_multiplier.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8/db {C:/Users/plankton/Desktop/PO/fpga/8/db/mult_73n.v}
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/dual_port_ram.v}
+
+vlog -vlog01compat -work work +incdir+C:/Users/plankton/Desktop/PO/fpga/8 {C:/Users/plankton/Desktop/PO/fpga/8/tb_po_fpga.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_po_fpga
+
+add wave *
+view structure
+view signals
+run -all

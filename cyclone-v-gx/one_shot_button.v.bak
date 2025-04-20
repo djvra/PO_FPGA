@@ -1,0 +1,14 @@
+module one_shot (
+    input wire clk,       // System clock
+    input wire button,    // Raw button input
+    output reg pulse_out  // One-shot pulse output
+);
+    reg button_sync = 0;   // Synchronized button
+    reg button_prev = 0;   // Previous button state
+
+    always @(posedge clk) begin
+        button_sync <= button;               // Synchronize to avoid metastability
+        pulse_out <= button_sync & ~button_prev; // Detect rising edge
+        button_prev <= button_sync;          // Update previous state
+    end
+endmodule

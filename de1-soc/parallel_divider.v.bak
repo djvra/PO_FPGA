@@ -1,0 +1,29 @@
+module parallel_divider(
+    input wire clk,
+    input wire reset,
+    input wire [31:0] num0, den0,  // Numerator and denominator for first division
+    input wire [31:0] num1, den1,  // Numerator and denominator for second division
+    input wire [31:0] num2, den2,  // Numerator and denominator for third division
+    input wire [31:0] num3, den3,  // Numerator and denominator for fourth division
+    output reg [31:0] quot0,       // Quotient for first division
+    output reg [31:0] quot1,       // Quotient for second division
+    output reg [31:0] quot2,       // Quotient for third division
+    output reg [31:0] quot3        // Quotient for fourth division
+);
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            quot0 <= 32'b0;
+            quot1 <= 32'b0;
+            quot2 <= 32'b0;
+            quot3 <= 32'b0;
+        end else begin
+            // Perform division in parallel
+            quot0 <= (den0 != 0) ? (num0 / den0) : 32'hFFFFFFFF;  // Handle divide-by-zero case
+            quot1 <= (den1 != 0) ? (num1 / den1) : 32'hFFFFFFFF;
+            quot2 <= (den2 != 0) ? (num2 / den2) : 32'hFFFFFFFF;
+            quot3 <= (den3 != 0) ? (num3 / den3) : 32'hFFFFFFFF;
+        end
+    end
+
+endmodule

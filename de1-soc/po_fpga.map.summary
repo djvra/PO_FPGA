@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Thu Feb 13 18:22:38 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : po_fpga
+Top-level Entity Name : po_fpga
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 21782
+Total pins : 106
+Total virtual pins : 0
+Total block memory bits : 592,348
+Total DSP Blocks : 70
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 1

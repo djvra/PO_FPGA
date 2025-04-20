@@ -1,0 +1,513 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do po_fpga_run_msim_rtl_verilog.do
+# if ![file isdirectory po_fpga_iputf_libs] {
+# 	file mkdir po_fpga_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/my_clock_sim/my_clock.vo"
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:01 on Feb 10,2025
+# vlog -reportprogress 300 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/my_clock_sim/my_clock.vo 
+# -- Compiling module my_clock
+# 
+# Top level modules:
+# 	my_clock
+# End time: 03:33:01 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/signed_adder_substractor.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:01 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/signed_adder_substractor.v 
+# -- Compiling module signed_adder_subtractor
+# 
+# Top level modules:
+# 	signed_adder_subtractor
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v 
+# -- Compiling module dual_port_ram
+# 
+# Top level modules:
+# 	dual_port_ram
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/control_unit.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v 
+# -- Compiling module po_fpga_simulation
+# 
+# Top level modules:
+# 	po_fpga_simulation
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_comparator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_comparator.v 
+# -- Compiling module integer_comparator
+# 
+# Top level modules:
+# 	integer_comparator
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_divider.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_divider.v 
+# -- Compiling module integer_divider
+# 
+# Top level modules:
+# 	integer_divider
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v 
+# -- Compiling module integer_multiplier
+# 
+# Top level modules:
+# 	integer_multiplier
+# End time: 03:33:02 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:02 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v 
+# -- Compiling module single_port_ram
+# 
+# Top level modules:
+# 	single_port_ram
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v 
+# -- Compiling module index_comparator
+# 
+# Top level modules:
+# 	index_comparator
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/ram_module.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/ram_module.v 
+# -- Compiling module ram_module
+# 
+# Top level modules:
+# 	ram_module
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v 
+# -- Compiling module integer_parallel_adder
+# 
+# Top level modules:
+# 	integer_parallel_adder
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v 
+# -- Compiling module parallel_divider
+# 
+# Top level modules:
+# 	parallel_divider
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v 
+# -- Compiling module sequential_loader
+# 
+# Top level modules:
+# 	sequential_loader
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_result_adjuster.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_result_adjuster.v 
+# -- Compiling module parallel_result_adjuster
+# 
+# Top level modules:
+# 	parallel_result_adjuster
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_73n.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_73n.v 
+# -- Compiling module mult_73n
+# 
+# Top level modules:
+# 	mult_73n
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_2l01.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:03 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_2l01.v 
+# -- Compiling module mult_2l01
+# 
+# Top level modules:
+# 	mult_2l01
+# End time: 03:33:03 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning {D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/tb_po_fpga.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 03:33:04 on Feb 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning" D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/tb_po_fpga.v 
+# -- Compiling module tb_po_fpga
+# 
+# Top level modules:
+# 	tb_po_fpga
+# End time: 03:33:04 on Feb 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_po_fpga
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_po_fpga 
+# Start time: 03:33:04 on Feb 10,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v(57): (vopt-2685) [TFMPC] - Too few port connections for 'cu'.  Expected 91, found 89.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v(57): (vopt-2718) [TFMPC] - Missing connection for port 'state_count_wire'.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v(57): (vopt-2718) [TFMPC] - Missing connection for port 'current_state_test'.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v(165): (vopt-2685) [TFMPC] - Too few port connections for 'dp'.  Expected 91, found 89.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v(165): (vopt-2718) [TFMPC] - Missing connection for port 'to_hps'.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v(165): (vopt-2718) [TFMPC] - Missing connection for port 'fpga_total_point_count'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ram_module(fast)".
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(34): (vopt-2685) [TFMPC] - Too few port connections for 'result_point_ISMCE'.  Expected 5, found 4.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(34): (vopt-2718) [TFMPC] - Missing connection for port 'q'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "sequential_loader(fast)".
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(302): (vopt-2685) [TFMPC] - Too few port connections for 'pd'.  Expected 37, found 36.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(353): (vopt-2685) [TFMPC] - Too few port connections for 'parallel_res_adj'.  Expected 31, found 28.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(353): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(353): (vopt-2718) [TFMPC] - Missing connection for port 'inner_Res11_out'.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(353): (vopt-2718) [TFMPC] - Missing connection for port 'inner_Res11'.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(394): (vopt-2685) [TFMPC] - Too few port connections for 'seq_loader'.  Expected 16, found 15.
+# ** Warning: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v(394): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "control_unit(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "parallel_result_adjuster(fast)".
+# ** Warning: $MODEL_TECH/../intel/verilog/src/altera_mf.v(51598): (vopt-8630) Infinity results from division operation.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=18.
+# Loading work.tb_po_fpga(fast)
+# Loading work.po_fpga_simulation(fast)
+# Loading work.control_unit(fast)
+# Loading work.datapath(fast)
+# Loading work.dual_port_ram(fast)
+# Loading work.ram_module(fast)
+# Loading work.integer_multiplier(fast)
+# Loading lpm_ver.lpm_mult(fast)
+# Loading lpm_ver.LPM_HINT_EVALUATION(fast)
+# Loading work.signed_adder_subtractor(fast)
+# Loading work.integer_comparator(fast)
+# Loading lpm_ver.lpm_compare(fast)
+# Loading work.index_comparator(fast)
+# Loading lpm_ver.lpm_compare(fast__1)
+# Loading work.integer_divider(fast)
+# Loading lpm_ver.lpm_divide(fast)
+# Loading work.integer_parallel_adder(fast)
+# Loading altera_mf_ver.parallel_add(fast)
+# Loading work.parallel_divider(fast)
+# Loading work.parallel_result_adjuster(fast)
+# Loading work.sequential_loader(fast)
+# Loading work.single_port_ram(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'ROWS'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/input_array File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (64) for port 'result'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/int_mult File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 213
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'datab'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v(42).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/j_index_comparator File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 255
+# ** Warning: (vsim-3015) [PCDPC] - Port size (68) does not match connection size (64) for port 'result'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v(53).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/int_parallel_add File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (40) does not match connection size (64) for port 'den'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/pd File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 302
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (64) for port 'point_count'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in0'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in1'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in2'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in3'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in4'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in5'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in6'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in7'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in8'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(18).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in9'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in10'. The port definition is at: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v Line: 394
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v Line: 34
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE/altsyncram_component File: D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v Line: 63
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE/altsyncram_component/m_default/altsyncram_inst File: c:/intelfpga_lite/23.1std/questa_fse/win64/../intel/verilog/src/altera_mf.v Line: 47806
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Test failed: done signal not asserted.
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[0] = 1
+# q_hat[1] = 0
+# q_hat[1] = 2
+# q_hat[1] = 2
+# q_hat[1] = 2
+# q_hat[1] = 2
+# q_hat[1] = 2
+# q_hat[1] = 2
+# q_hat[1] = 2
+# q_hat[1] = 11
+# q_hat[2] = 0
+# q_hat[2] = -2
+# q_hat[2] = 1
+# q_hat[2] = 1
+# q_hat[2] = 1
+# q_hat[2] = 1
+# q_hat[2] = 1
+# q_hat[2] = 1
+# q_hat[2] = 1
+# q_hat[3] = 0
+# q_hat[3] = -6
+# q_hat[3] = 0
+# q_hat[3] = 4
+# q_hat[3] = 4
+# q_hat[3] = 4
+# q_hat[3] = 11
+# q_hat[3] = 11
+# q_hat[3] = 11
+# q_hat[4] = 0
+# q_hat[4] = 12
+# q_hat[4] = 0
+# q_hat[4] = -12
+# q_hat[4] = -7
+# q_hat[4] = -7
+# q_hat[4] = -7
+# q_hat[4] = -7
+# q_hat[4] = -7
+# q_hat[5] = 0
+# q_hat[5] = 0
+# q_hat[5] = 0
+# q_hat[5] = 0
+# q_hat[5] = 0
+# q_hat[5] = 6
+# q_hat[5] = 6
+# q_hat[5] = 14
+# q_hat[5] = 14
+# q_hat[6] = 0
+# q_hat[6] = 342
+# q_hat[6] = 0
+# q_hat[6] = -328
+# q_hat[6] = -208
+# q_hat[6] = -208
+# q_hat[6] = -250
+# q_hat[6] = -250
+# q_hat[6] = -250
+# q_hat[7] = 0
+# q_hat[7] = 31080
+# q_hat[7] = 0
+# q_hat[7] = -29820
+# q_hat[7] = -18900
+# q_hat[7] = -18924
+# q_hat[7] = -22704
+# q_hat[7] = -22728
+# q_hat[7] = -22728
+# q_hat[8] = 0
+# q_hat[8] = -1056720
+# q_hat[8] = 0
+# q_hat[8] = 1013880
+# q_hat[8] = 642600
+# q_hat[8] = 643440
+# q_hat[8] = 771960
+# q_hat[8] = 772800
+# q_hat[8] = 772800
+# prime_diagonals[0] = 840
+# prime_diagonals[1] = 840
+# prime_diagonals[2] = 840
+# prime_diagonals[3] = 840
+# prime_diagonals[4] = 840
+# prime_diagonals[5] = 420
+# prime_diagonals[6] = 420
+# prime_diagonals[7] = 70
+# prime_diagonals[8] = 1
+# q_summand[0] = 840
+# q_summand[1] = 1680
+# q_summand[2] = 2520
+# q_summand[3] = 3360
+# q_summand[4] = 4200
+# q_summand[5] = 5040
+# q_summand[6] = 5880
+# q_summand[7] = 6720
+# q_summand[8] = 7560
+# q_trans[0] = 0
+# q_trans[0] = -9240
+# q_trans[0] = -7560
+# q_trans[0] = 158760
+# q_trans[0] = 17640
+# q_trans[0] = 70560
+# q_trans[0] = -76159440
+# q_trans[0] = 3326904000
+# q_trans[0] = 0
+# q_trans[1] = 0
+# q_trans[1] = 0
+# q_trans[1] = 0
+# q_trans[1] = 9240
+# q_trans[1] = 9240
+# q_trans[1] = 3360
+# q_trans[1] = -2726640
+# q_trans[1] = 11592000
+# q_trans[1] = 0
+# q_trans[2] = 0
+# q_trans[2] = 0
+# q_trans[2] = 0
+# q_trans[2] = -9240
+# q_trans[2] = -9240
+# q_trans[2] = -15120
+# q_trans[2] = 2714880
+# q_trans[2] = -200928000
+# q_trans[2] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = -29400
+# q_trans[3] = -23520
+# q_trans[3] = -3803520
+# q_trans[3] = 238022400
+# q_trans[3] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+# q_trans[4] = 27720
+# q_trans[4] = 21840
+# q_trans[4] = 21840
+# q_trans[4] = -10478160
+# q_trans[4] = 357033600
+# q_trans[4] = 0
+# q_trans[5] = 0
+# q_trans[5] = 0
+# q_trans[5] = 840
+# q_trans[5] = 28560
+# q_trans[5] = 16800
+# q_trans[5] = 16800
+# q_trans[5] = -11113200
+# q_trans[5] = 378672000
+# q_trans[5] = 0
+# q_trans[6] = 0
+# q_trans[6] = 0
+# q_trans[6] = 0
+# q_trans[6] = 27720
+# q_trans[6] = 4200
+# q_trans[6] = 4200
+# q_trans[6] = -12700800
+# q_trans[6] = 432768000
+# q_trans[6] = 0
+# q_trans[7] = 840
+# q_trans[7] = 840
+# q_trans[7] = 0
+# q_trans[7] = -83160
+# q_trans[7] = -12600
+# q_trans[7] = -12600
+# q_trans[7] = 38102400
+# q_trans[7] = -1298304000
+# q_trans[7] = 0
+# q_trans[8] = -840
+# q_trans[8] = -840
+# q_trans[8] = -840
+# q_trans[8] = -840
+# q_trans[8] = -840
+# q_trans[8] = -840
+# q_trans[8] = -840
+# q_trans[8] = -840
+# q_trans[8] = -840
+# total_point_count = 40320
+# state_count = 4678077
+# End time: 03:52:47 on Feb 10,2025, Elapsed time: 0:19:43
+# Errors: 0, Warnings: 38

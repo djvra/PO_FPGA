@@ -1,0 +1,33 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\QuartusProjects\26_warning_original_DE1_SOC_valid\alt_clk.qsys --block-symbol-file --output-directory=D:\QuartusProjects\26_warning_original_DE1_SOC_valid\alt_clk --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading 26_warning_original_DE1_SOC_valid/alt_clk.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 23.1]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: alt_clk.altclkctrl_0: Targeting device family: Cyclone V.
+: alt_clk.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\QuartusProjects\26_warning_original_DE1_SOC_valid\alt_clk.qsys --synthesis=VERILOG --output-directory=D:\QuartusProjects\26_warning_original_DE1_SOC_valid\alt_clk\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading 26_warning_original_DE1_SOC_valid/alt_clk.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 23.1]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: alt_clk.altclkctrl_0: Targeting device family: Cyclone V.
+: alt_clk.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: alt_clk: Generating alt_clk "alt_clk" for QUARTUS_SYNTH
+Info: altclkctrl_0: Generating top-level entity alt_clk_altclkctrl_0.
+Info: altclkctrl_0: "alt_clk" instantiated altclkctrl "altclkctrl_0"
+Info: alt_clk: Done "alt_clk" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,91 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\QuartusProjects\26_warning_original_DE1_SOC_valid\parallel_hps_single_pio.qsys --block-symbol-file --output-directory=D:\QuartusProjects\26_warning_original_DE1_SOC_valid\parallel_hps_single_pio --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading 26_warning_original_DE1_SOC_valid/parallel_hps_single_pio.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 23.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 23.1]
+Progress: Parameterizing module hps_0
+Progress: Adding pio_0 [altera_avalon_pio 23.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 23.1]
+Progress: Parameterizing module pio_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: parallel_hps_single_pio.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: parallel_hps_single_pio.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: parallel_hps_single_pio.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: parallel_hps_single_pio.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: parallel_hps_single_pio.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: parallel_hps_single_pio.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\QuartusProjects\26_warning_original_DE1_SOC_valid\parallel_hps_single_pio.qsys --synthesis=VERILOG --output-directory=D:\QuartusProjects\26_warning_original_DE1_SOC_valid\parallel_hps_single_pio\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading 26_warning_original_DE1_SOC_valid/parallel_hps_single_pio.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 23.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 23.1]
+Progress: Parameterizing module hps_0
+Progress: Adding pio_0 [altera_avalon_pio 23.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 23.1]
+Progress: Parameterizing module pio_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: parallel_hps_single_pio.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: parallel_hps_single_pio.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: parallel_hps_single_pio.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: parallel_hps_single_pio.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: parallel_hps_single_pio.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: parallel_hps_single_pio.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: parallel_hps_single_pio: Generating parallel_hps_single_pio "parallel_hps_single_pio" for QUARTUS_SYNTH
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: hps_0: "parallel_hps_single_pio" instantiated altera_hps "hps_0"
+Info: pio_0: Starting RTL generation for module 'parallel_hps_single_pio_pio_0'
+Info: pio_0:   Generation command is [exec cmd /c {set LC_ALL=C&& C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=parallel_hps_single_pio_pio_0 --dir=C:/Users/ELIF/AppData/Local/Temp/alt0120_7453978586672879099.dir/0002_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/ELIF/AppData/Local/Temp/alt0120_7453978586672879099.dir/0002_pio_0_gen//parallel_hps_single_pio_pio_0_component_configuration.pl --do_build_sim=0}]
+Info: pio_0: Done RTL generation for module 'parallel_hps_single_pio_pio_0'
+Info: pio_0: "parallel_hps_single_pio" instantiated altera_avalon_pio "pio_0"
+Info: pio_1: Starting RTL generation for module 'parallel_hps_single_pio_pio_1'
+Info: pio_1:   Generation command is [exec cmd /c {set LC_ALL=C&& C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=parallel_hps_single_pio_pio_1 --dir=C:/Users/ELIF/AppData/Local/Temp/alt0120_7453978586672879099.dir/0003_pio_1_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/ELIF/AppData/Local/Temp/alt0120_7453978586672879099.dir/0003_pio_1_gen//parallel_hps_single_pio_pio_1_component_configuration.pl --do_build_sim=0}]
+Info: pio_1: Done RTL generation for module 'parallel_hps_single_pio_pio_1'
+Info: pio_1: "parallel_hps_single_pio" instantiated altera_avalon_pio "pio_1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "parallel_hps_single_pio" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "parallel_hps_single_pio" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: pio_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "pio_0_s1_translator"
+Info: hps_0_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: pio_0_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "pio_0_s1_agent"
+Info: pio_0_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "pio_0_s1_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: hps_0_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_axi_master_wr_limiter"
+Info: Reusing file D:/QuartusProjects/26_warning_original_DE1_SOC_valid/parallel_hps_single_pio/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: pio_0_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "pio_0_s1_burst_adapter"
+Info: Reusing file D:/QuartusProjects/26_warning_original_DE1_SOC_valid/parallel_hps_single_pio/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/QuartusProjects/26_warning_original_DE1_SOC_valid/parallel_hps_single_pio/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/QuartusProjects/26_warning_original_DE1_SOC_valid/parallel_hps_single_pio/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: parallel_hps_single_pio: Done "parallel_hps_single_pio" with 23 modules, 80 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

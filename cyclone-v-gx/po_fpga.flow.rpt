@@ -1,0 +1,152 @@
+Flow report for po_fpga
+Mon Jan 20 17:53:53 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Mon Jan 20 17:53:52 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                   ; po_fpga                                        ;
+; Top-level Entity Name           ; po_fpga_simulation                             ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CGXFC5C6F27C7                                 ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 22436                                          ;
+; Total pins                      ; 4                                              ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 984,076                                        ;
+; Total DSP Blocks                ; 78                                             ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/20/2025 17:52:16 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; po_fpga             ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                    ;
++--------------------------------------+----------------------------------------+---------------+--------------------+----------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name        ; Section Id     ;
++--------------------------------------+----------------------------------------+---------------+--------------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 26601941904077.173738473603384         ; --            ; --                 ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                 ; tb_po_fpga     ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_po_fpga                             ; --            ; --                 ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --                 ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (Verilog)            ; <None>        ; --                 ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --                 ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; tb_po_fpga.v                           ; --            ; --                 ; tb_po_fpga     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_po_fpga                             ; --            ; --                 ; tb_po_fpga     ;
+; EDA_TEST_BENCH_NAME                  ; tb_po_fpga                             ; --            ; --                 ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --                 ; eda_simulation ;
+; FITTER_EFFORT                        ; Standard Fit                           ; Auto Fit      ; --                 ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --                 ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_comparator_inst.v              ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_comparator_bb.v                ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_divider_inst.v                 ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_divider_bb.v                   ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_multiplier_inst.v              ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_multiplier_bb.v                ; --            ; --                 ; --             ;
+; MISC_FILE                            ; my_clock.cmp                           ; --            ; --                 ; --             ;
+; MISC_FILE                            ; my_clock_sim/my_clock.vo               ; --            ; --                 ; --             ;
+; MISC_FILE                            ; single_port_ram_inst.v                 ; --            ; --                 ; --             ;
+; MISC_FILE                            ; single_port_ram_bb.v                   ; --            ; --                 ; --             ;
+; MISC_FILE                            ; index_comparator_inst.v                ; --            ; --                 ; --             ;
+; MISC_FILE                            ; index_comparator_bb.v                  ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_parallel_adder_inst.v          ; --            ; --                 ; --             ;
+; MISC_FILE                            ; integer_parallel_adder_bb.v            ; --            ; --                 ; --             ;
+; MUX_RESTRUCTURE                      ; Off                                    ; Auto          ; --                 ; --             ;
+; OPTIMIZATION_MODE                    ; Aggressive Performance                 ; Balanced      ; --                 ; --             ;
+; OPTIMIZATION_TECHNIQUE               ; Speed                                  ; Balanced      ; --                 ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; po_fpga_simulation ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; po_fpga_simulation ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; po_fpga_simulation ; Top            ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; On                                     ; Off           ; --                 ; --             ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; On                                     ; Off           ; --                 ; --             ;
+; PLACEMENT_EFFORT_MULTIPLIER          ; 4.0                                    ; 1.0           ; --                 ; --             ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --                 ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                 ; --             ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL     ; MAXIMUM                                ; Normal        ; --                 ; --             ;
+; SPD_FILE                             ; my_clock.spd                           ; --            ; --                 ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                     ; --            ; --                 ; --             ;
+; TOP_LEVEL_ENTITY                     ; po_fpga_simulation                     ; po_fpga       ; --                 ; --             ;
++--------------------------------------+----------------------------------------+---------------+--------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:31     ; 1.6                     ; 6116 MB             ; 00:02:13                           ;
+; Total                ; 00:01:31     ; --                      ; --                  ; 00:02:13                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-DOFB0R8  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off po_fpga -c po_fpga
+
+
+

@@ -1,0 +1,26 @@
+
+
+C:/Users/plankton/Desktop/PO/fpga/8/my_clock.v
+
+Sep 07 09PM:02:17>: Megafunction PLL Intel FPGA IP v23.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/plankton/Desktop/PO/fpga/8/my_clock.v
+
+Sep 07 09PM:02:24>: Megafunction PLL Intel FPGA IP v23.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/plankton/Desktop/PO/fpga/8/my_clock.v
+
+Sep 08 08PM:53:07>: Megafunction PLL Intel FPGA IP v23.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/plankton/Desktop/PO/fpga/9/my_clock.v
+
+Sep 09 09PM:32:06>: Megafunction PLL Intel FPGA IP v23.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/plankton/Desktop/PO/fpga/9/my_clock.v
+
+Sep 09 09PM:32:09>: Megafunction PLL Intel FPGA IP v23.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

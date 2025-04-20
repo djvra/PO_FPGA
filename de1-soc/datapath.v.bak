@@ -1,0 +1,533 @@
+module datapath(
+	input clk,
+	input reset,
+	input go_i,
+	
+	// register operations
+	input ld_int_add_sub_res_reg,
+	input ld_int_mult_res_reg,
+	
+	input ld_rows_minus_one,
+	input ld_each_cone_size,
+	input ld_each_cone,
+	input ld_V_index,
+	input ld_temp_V_index,
+	input ld_init_temp_V_index,
+	input ld_Uinv_index,
+	input ld_temp_Uinv_index,
+	input ld_Winv_index,
+	input ld_temp_Winv_index,
+	input ld_init_temp_Winv_index,
+	input ld_q_index,
+	input ld_s_index,
+	input ld_o_index,
+	input ld_last_diagonal,
+	input ld_input_array_address_a,
+	input ld_prime_diagonals,
+	input ld_q_summand,
+	input ld_q_hat,
+	input ld_q_trans,
+	input ld_inner_Res,
+	input ld_v_inner,
+	input ld_int_comparator_aeb_reg,
+	input ld_int_comparator_alb_reg,
+	input ld_total_point_count,
+	input ld_outer,
+	input ld_result_point,
+	input ld_point_count,
+	input ld_i,
+	input ld_j,
+	input ld_temp_reg0,
+	
+	// clear
+	input clear_i,
+	input clear_j,
+	
+	// array operations
+	input clear_point_count,
+	input clear_outer,
+	input clear_inner_Res,
+	input clear_arrays,
+	
+	// mux
+	input [2:0] int_mult_dataa_sel,
+	input [2:0] int_mult_datab_sel,
+	input [3:0] int_add_sub_dataa_sel,
+	input [3:0] int_add_sub_datab_sel,
+	input int_add_sub_add_sub_sel,
+	input [2:0] int_comparator_dataa_sel,
+	input [2:0] int_comparator_datab_sel,
+	input int_comparator_dataa_i0_sel,
+	input int_comparator_dataa_i1_sel,
+	input int_comparator_datab_i0_sel,
+	input int_comparator_datab_i1_sel,
+	input int_comparator_datab_i3_sel,
+	input [1:0] int_divider_numer_sel,
+	input [1:0] int_divider_denom_sel,
+	input int_divider_clken,
+	input [1:0] inner_Res_sel,
+	input i_sel,
+	input v_inner_sel,
+	
+	// input_array operations
+	input [1:0] input_array_address_a_sel,
+	input [1:0] input_array_address_b_sel,
+	input input_array_wren_a,
+	input input_array_wren_b,
+	
+	// comparator signals
+	output reg int_comparator_aeb,
+	output reg int_comparator_alb,
+	output reg int_comparator_not_alb,
+	output reg inner_Res_and_input_array
+	
+);
+
+// bunlar elle girilmeli
+//parameter integer ROWS = 3; // COLUMNS ile ayni
+//parameter integer ROWS_ = 2; // ROWS-1 !!! 2D register tanimlari icin gerekli
+//parameter integer NUMBER_OF_CONES = 3;
+
+reg [3:0] ROWS, ROWS_MINUS_ONE, NUMBER_OF_CONES;
+
+parameter integer ARRAY_LENGTH = 11; // 12 yani, her seferinde degistirmeye gerek kalmasin diye
+
+// REGISTERS
+//reg [ARRAY_LENGTH:0] result_point [0:999]; // bunu simulasyon basinda sifirla
+reg [31:0] result_point [0:999][0:ARRAY_LENGTH]; 
+
+reg [63:0] prime_diagonals [0:ARRAY_LENGTH]; // 64-bit
+reg [63:0] q_summand [0:ARRAY_LENGTH]; // 64-bit
+reg [63:0] q_hat [0:ARRAY_LENGTH]; // 64-bit
+reg [63:0] q_trans [0:ARRAY_LENGTH]; // 64-bit
+reg [63:0] inner_Res [0:ARRAY_LENGTH]; // 64-bit
+
+// her cone için sifirlanmali
+reg [63:0] v_inner [0:ARRAY_LENGTH];
+reg [63:0] q_int [0:ARRAY_LENGTH];
+
+                  
+// initialize zero at the beggining (sadece program basinda 0 yapiliyor)
+reg [63:0] cone_start_index, point_count, total_point_count, each_cone;
+
+reg [63:0] each_cone_size;
+reg [63:0] V_index, Uinv_index, Winv_index, q_index, s_index, o_index, last_diagonal, outer;
+reg [63:0] temp_V_index, temp_Uinv_index, temp_Winv_index;
+reg [63:0] inner_Res_mux_out;
+
+// registers required for 'for' loops
+reg [63:0] i, j;
+
+// temp registers
+reg [63:0] temp_reg0; // for prime_diagonals
+
+// 2 PORT RAM FOR input_array
+reg [8:0] input_array_address_a, input_array_address_b;
+reg [63:0] input_array_data_a, input_array_data_b;
+wire [63:0] input_array_q_a, input_array_q_b;
+reg [8:0] input_array_test_addr;
+
+/*ram_2port input_array(
+	.address_a(input_array_address_a),
+	.address_b(input_array_address_b),
+	.clock(clk),
+	.data_a(input_array_data_a),
+	.data_b(input_array_data_b),
+	.wren_a(input_array_wren_a),
+	.wren_b(input_array_wren_b),
+	.q_a(input_array_q_a),
+	.q_b(input_array_q_b)
+);*/
+
+dual_port_ram input_array (
+	.address_a(input_array_address_a),
+	.address_b(input_array_address_b),
+	.clk(clk),
+	.data_a(input_array_data_a),
+	.data_b(input_array_data_b),
+	.wren_a(input_array_wren_a),
+	.wren_b(input_array_wren_b),
+	.q_a(input_array_q_a),
+	.q_b(input_array_q_b)
+);
+
+// INTEGER MULTIPLIER
+reg [63:0] int_mult_dataa, int_mult_datab;
+reg [63:0] int_mult_res_reg; // 64-bit
+wire [63:0] int_mult_res; // 64-bit
+
+integer_multiplier int_mult(
+	.dataa(int_mult_dataa),
+	.datab(int_mult_datab),
+	.result(int_mult_res)
+	//.clock(clk)
+);
+
+
+// INTEGER ADDER SUBSTRACTOR
+reg [63:0] int_add_sub_dataa, int_add_sub_datab, int_add_sub_res_reg;
+wire [63:0] int_add_sub_res;
+reg int_add_sub_add_sub; // :SSS
+wire int_add_sub_overflow;
+
+/*integer_adder_substractor int_add_sub(
+	.add_sub(int_add_sub_add_sub),
+	.dataa(int_add_sub_dataa),
+	.datab(int_add_sub_datab),
+	.overflow(int_add_sub_overflow),
+	.result(int_add_sub_res)
+);*/
+
+
+signed_adder_subtractor int_add_sub (
+	.dataa(int_add_sub_dataa),
+	.datab(int_add_sub_datab),
+	.add_sub(int_add_sub_add_sub), // if this is 1, add; else subtract
+	.result(int_add_sub_res)
+);
+
+
+// INTEGER COMPARATOR == , < 
+reg [63:0] int_comparator_dataa, int_comparator_datab, int_comparator_aeb_reg, int_comparator_alb_reg;
+wire int_comparator_aeb_wire, int_comparator_alb_wire;
+
+integer_comparator int_comparator (
+	.dataa(int_comparator_dataa),
+	.datab(int_comparator_datab),
+	.aeb(int_comparator_aeb_wire),
+	.alb(int_comparator_alb_wire)
+);
+
+
+// INTEGER DIVIDER
+reg [63:0] int_divider_denom, int_divider_numer;
+wire [63:0] int_divider_quotient, int_divider_remain;
+	
+integer_divider int_divider(
+	//.clken(int_divider_clken),
+	//.clock(clk),
+	.denom(int_divider_denom),
+	.numer(int_divider_numer),
+	.quotient(int_divider_quotient),
+	.remain(int_divider_remain)
+	// asc clear gerekli mi?
+);
+
+/*reg [63:0] data_x, data_y;
+reg [63:0] sub_a, sub_b;
+reg [63:0] sub_out;
+
+
+//Define registers x, y and d
+reg [63:0] x;
+reg [63:0] y;
+reg [63:0] d;
+reg xeqy;
+
+assign d_o = d;*/
+
+genvar index;
+
+/*generate
+  for (index = 0; index < ROWS; index = index + 1) begin : array_init
+		always @(posedge clk) begin
+			 if (clear_arrays) begin
+				  //q_summand[index] <= 64'b0; // 64-bit
+				  v_inner[index] <= 64'b0;
+				  //q_hat[index] <= 64'b0;    // 64-bit      
+				  q_trans[index] <= 64'b0;  // 64-bit
+				  q_int[index] <= 64'b0;
+			 end
+		end
+  end
+endgenerate*/
+
+integer a;
+always@(posedge clk) begin
+	if(go_i) begin
+		cone_start_index <= 64'b0;
+		point_count <= 64'b0;
+		total_point_count <= 64'b0;
+		each_cone <= 64'b0;
+	end else begin
+		if (ld_int_add_sub_res_reg)
+			int_add_sub_res_reg <= int_add_sub_res;
+		if (ld_int_mult_res_reg)
+			int_mult_res_reg <= int_mult_res;
+		if (ld_rows_minus_one)
+			ROWS_MINUS_ONE <= int_add_sub_res;
+		if (ld_each_cone_size)
+			each_cone_size <= int_mult_res;
+		if (ld_each_cone)
+			each_cone <= int_add_sub_res;
+		if (ld_V_index)
+			V_index <= cone_start_index;
+	
+		if (ld_temp_V_index && !ld_init_temp_V_index) begin
+			temp_V_index <= int_add_sub_res;
+		end else if (!ld_temp_V_index && ld_init_temp_V_index) begin
+			temp_V_index <= V_index;
+		end
+			
+		if (ld_Uinv_index)
+			Uinv_index <= int_add_sub_res;
+		if (ld_temp_Uinv_index)
+			temp_Uinv_index <= int_add_sub_res;
+		if (ld_Winv_index)
+			Winv_index <= int_add_sub_res;
+		
+		if (ld_temp_Winv_index && !ld_init_temp_Winv_index) begin
+			temp_Winv_index <= int_add_sub_res;
+		end else if (!ld_temp_Winv_index && ld_init_temp_Winv_index) begin
+			temp_Winv_index <= Winv_index;
+		end
+		
+		if (ld_q_index)
+			q_index <= int_add_sub_res;
+		if (ld_s_index)
+			s_index <= int_add_sub_res;
+		if (ld_o_index)
+			o_index <= int_add_sub_res;
+		if (ld_last_diagonal)
+			last_diagonal <= input_array_q_a;
+		/*if (ld_input_array_address_a)
+			input_array_address_a <= int_add_sub_res[8:0];*/
+		if (ld_prime_diagonals)
+			prime_diagonals[i] <= int_divider_quotient;
+		if (ld_int_comparator_aeb_reg)
+			int_comparator_aeb_reg <= int_comparator_aeb_wire;
+		if (ld_int_comparator_alb_reg)
+			int_comparator_alb_reg <= int_comparator_alb_wire;
+		if (ld_total_point_count)
+			total_point_count <= int_add_sub_res;
+		if (ld_result_point)
+			result_point[point_count][i] <= int_divider_quotient;
+		if (ld_temp_reg0)
+			temp_reg0 <= prime_diagonals[i];
+			
+		if (!ld_point_count && clear_point_count) begin
+			point_count <= 64'b0;
+		end else if (ld_point_count && !clear_point_count) begin
+			point_count <= int_add_sub_res;
+		end
+			
+		if (!ld_outer && clear_outer) begin
+			outer <= 64'b0;
+		end else if (ld_outer && !clear_outer) begin
+			outer <= int_add_sub_res;
+		end
+			
+		if (!ld_q_summand && clear_arrays) begin
+			for (a = 0; a < ARRAY_LENGTH; a = a + 1) q_summand[a] <= 64'b0;
+		end else if (ld_q_summand && !clear_arrays) begin
+			q_summand[i] <= int_mult_res;
+		end
+		
+		if (!ld_q_hat && clear_arrays) begin
+			for (a = 0; a < ARRAY_LENGTH; a = a + 1) q_hat[a] <= 64'b0;
+		end else if (ld_q_hat && !clear_arrays) begin
+			q_hat[i] <= int_add_sub_res;
+		end
+		
+		if (!ld_q_trans && clear_arrays) begin
+			for (a = 0; a < ARRAY_LENGTH; a = a + 1) q_trans[a] <= 64'b0;
+		end else if (ld_q_trans && !clear_arrays) begin
+			q_trans[i] <= int_add_sub_res;
+		end
+		
+		if (!ld_v_inner && clear_arrays) begin
+			for (a = 0; a < ARRAY_LENGTH; a = a + 1) v_inner[a] <= 64'b0;
+		end else if (ld_v_inner && !clear_arrays) begin
+			if (v_inner_sel)
+				v_inner[i] <= int_add_sub_res;
+			else
+				v_inner[i] <= 64'b0;
+		end
+		
+	
+		if (!ld_inner_Res && clear_inner_Res) begin
+			for (a = 0; a < ARRAY_LENGTH; a = a + 1) inner_Res[a] <= 64'b0;
+		end else if (ld_inner_Res && !clear_inner_Res) begin
+			inner_Res[i] <= inner_Res_mux_out;
+		end
+		
+		
+		if (clear_i) begin
+			i <= 64'b0;
+		end else if (ld_i) begin
+			if (i_sel)
+				i <= ROWS_MINUS_ONE;
+			else 
+				i <= int_add_sub_res;
+		end
+		
+		if (clear_j) begin
+			j <= 64'b0;
+		end else if (ld_j) begin
+			j <= int_add_sub_res;
+		end
+		
+	end
+end
+	
+//Datapath Combinational Part
+always@(*) begin
+
+	case(int_mult_dataa_sel)
+		3'b000: int_mult_dataa = ROWS;
+		3'b001: int_mult_dataa = int_mult_res_reg;
+		3'b010: int_mult_dataa = last_diagonal;
+		3'b011: int_mult_dataa = i;
+		3'b100: int_mult_dataa = input_array_q_a;
+		3'b101: int_mult_dataa = j;
+		3'b110: int_mult_dataa = inner_Res[j];
+		// BOS
+		3'b111: int_mult_dataa = 64'd0;
+	endcase
+	
+	case(int_mult_datab_sel)
+		3'b000: int_mult_datab = 64'd3;
+		3'b001: int_mult_datab = int_add_sub_res_reg;
+		3'b010: int_mult_datab = ROWS;
+		3'b011: int_mult_datab = input_array_q_b;
+		3'b100: int_mult_datab = prime_diagonals[i];
+		3'b101: int_mult_datab = q_hat[j];
+		3'b110: int_mult_datab = v_inner[j];
+		
+		// BOS
+		3'b111: int_mult_datab = 64'd0;
+	endcase
+	
+	case(int_add_sub_dataa_sel)
+		4'b0000: int_add_sub_dataa = ROWS;
+		4'b0001: int_add_sub_dataa = each_cone;
+		4'b0010: int_add_sub_dataa = int_mult_res_reg;
+		4'b0011: int_add_sub_dataa = ROWS_MINUS_ONE;
+		4'b0100: int_add_sub_dataa = i;
+		4'b0101: int_add_sub_dataa = j;
+		4'b0110: int_add_sub_dataa = temp_Uinv_index;
+		4'b0111: int_add_sub_dataa = temp_Winv_index;
+		4'b1000: int_add_sub_dataa = q_trans[i];
+		4'b1001: int_add_sub_dataa = last_diagonal;
+		4'b1010: int_add_sub_dataa = inner_Res[i];
+		4'b1011: int_add_sub_dataa = v_inner[i];
+		4'b1100: int_add_sub_dataa = input_array_q_a;
+		4'b1101: int_add_sub_dataa = 1'b1; //total_point_count
+		4'b1110: int_add_sub_dataa = 64'b0; //temp_V_index
+		4'b1111: int_add_sub_dataa = q_summand[i];
+	endcase
+	
+	case(int_add_sub_datab_sel)
+		4'b0000: int_add_sub_datab = 1'b1;
+		4'b0001: int_add_sub_datab = V_index;
+		4'b0010: int_add_sub_datab = Uinv_index;
+		4'b0011: int_add_sub_datab = Winv_index;
+		4'b0100: int_add_sub_datab = q_index;
+		4'b0101: int_add_sub_datab = s_index;
+		4'b0110: int_add_sub_datab = int_mult_res_reg;
+		4'b0111: int_add_sub_datab = q_hat[i];
+		4'b1000: int_add_sub_datab = temp_Winv_index;
+		4'b1001: int_add_sub_datab = inner_Res[i];
+		4'b1010: int_add_sub_datab = o_index;
+		4'b1011: int_add_sub_datab = outer;
+		
+		4'b1100: int_add_sub_datab = total_point_count;
+		4'b1101: int_add_sub_datab = temp_V_index;
+		4'b1110: int_add_sub_datab = point_count;
+		// bos
+		
+		4'b1111: int_add_sub_datab = 64'b0;
+	endcase
+	
+	case(int_add_sub_add_sub_sel)
+		1'b0: int_add_sub_add_sub = 1'b0; // sub
+		1'b1: int_add_sub_add_sub = 1'b1; // add
+	endcase
+	
+	/*case(int_comparator_dataa_sel)
+		2'b00: int_comparator_dataa = (int_comparator_dataa_i0_sel) ? each_cone : input_array_q_a;
+		2'b01: int_comparator_dataa = (int_comparator_dataa_i1_sel) ? v_inner[i] : i;
+		2'b10: int_comparator_dataa = j;
+		2'b11: int_comparator_dataa = inner_Res[i];
+	endcase*/
+	
+	case(int_comparator_dataa_sel)
+		3'b000: int_comparator_dataa = each_cone;
+		3'b001: int_comparator_dataa = i;
+		3'b010: int_comparator_dataa = j;
+		3'b011: int_comparator_dataa = inner_Res[i];
+		3'b100: int_comparator_dataa = input_array_q_a;
+		3'b101: int_comparator_dataa = v_inner[i];
+		3'b110: int_comparator_dataa = point_count;
+		3'b111: int_comparator_dataa = 64'b0;
+	endcase
+	
+	/*case(int_comparator_datab_sel)
+		2'b00: int_comparator_datab = (int_comparator_datab_i0_sel) ? int_add_sub_res_reg : NUMBER_OF_CONES;
+		2'b01: int_comparator_datab = (int_comparator_datab_i1_sel) ? 64'hFFFFFFFFFFFFFFFF : ROWS;
+		2'b10: int_comparator_datab = 64'd13; // bu degerin 2 kati + 4 kadar divider enable ediliyor
+		2'b11: int_comparator_datab = (int_comparator_datab_i3_sel) ? 64'b1 : 64'd0;
+	endcase*/
+	
+	case(int_comparator_datab_sel)
+		3'b000: int_comparator_datab = NUMBER_OF_CONES;
+		3'b001: int_comparator_datab = ROWS;
+		3'b010: int_comparator_datab = 64'd13; // bu degerin 2 kati + 4 kadar divider enable ediliyor
+		3'b011: int_comparator_datab = 64'd0;
+		3'b100: int_comparator_datab = int_add_sub_res_reg;
+		3'b101: int_comparator_datab = 64'hFFFFFFFFFFFFFFFF;
+		3'b110: int_comparator_datab = 64'b1;
+		3'b111: int_comparator_datab = 64'd1000;
+	endcase
+	
+	case(int_divider_numer_sel)
+		2'b00: int_divider_numer = last_diagonal;
+		2'b01: int_divider_numer = inner_Res[i];
+		2'b10: int_divider_numer = int_add_sub_res_reg;
+		
+		// bos
+		2'b11: int_divider_numer = 64'b0;
+	endcase
+	
+	case(int_divider_denom_sel)
+		2'b00: int_divider_denom = input_array_q_a;
+		2'b01: int_divider_denom = last_diagonal;
+		
+		// BOS
+		2'b10: int_divider_denom = 64'b0;
+		2'b11: int_divider_denom = 64'b0;
+	endcase
+	
+	case(input_array_address_a_sel)
+		2'b00: input_array_address_a = int_add_sub_res[8:0]; 
+		2'b01: input_array_address_a = int_add_sub_res_reg[8:0];
+		2'b10: input_array_address_a = temp_Uinv_index[8:0];
+		2'b11: input_array_address_a = temp_Winv_index[8:0];		
+	endcase
+	
+	case(input_array_address_b_sel)
+		2'b00: input_array_address_b = int_add_sub_res[8:0]; 
+		2'b01: input_array_address_b = int_add_sub_res_reg[8:0];
+		2'b10: input_array_address_b = input_array_test_addr;
+		2'b11: input_array_address_b = temp_V_index[8:0];	
+	endcase
+	
+	case(inner_Res_sel)
+		2'b00: inner_Res_mux_out = q_trans[i];
+		2'b01: inner_Res_mux_out = int_add_sub_res_reg;
+		2'b10: inner_Res_mux_out = int_divider_remain;
+		2'b11: inner_Res_mux_out = last_diagonal;
+	endcase
+	
+	int_comparator_aeb = int_comparator_aeb_wire;
+	int_comparator_alb = int_comparator_alb_wire;
+	
+	input_array_data_a = int_mult_res_reg;
+	
+	inner_Res_and_input_array = int_comparator_aeb_reg && int_comparator_aeb_wire;
+	
+	int_comparator_not_alb = ~int_comparator_alb_wire;
+
+end
+
+endmodule

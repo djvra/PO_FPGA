@@ -1,0 +1,480 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/simulation/questa
+T_opt
+!s110 1739147585
+VJ1VLA]Ki;0ha64_=mLm_c0
+04 10 4 work tb_po_fpga fast 0
+=1-1831bf4c2acd-67a94941-24-302c
+R0
+!s12b OEM100
+!s124 OEM10U38 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vcontrol_unit
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/control_unit.v
+Z3 !s110 1739147582
+!i10b 1
+!s100 19nFaClkZEk]dYz94NC6a2
+I[iEX1MABH90APJ[QT0WS]1
+R1
+w1739146340
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/control_unit.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/control_unit.v
+!i122 4
+L0 1 1239
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z6 !s108 1739147582.000000
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/control_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/control_unit.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdatapath
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v
+R3
+!i10b 1
+!s100 <NRcFHzhNaG@jf:lK913]1
+IN?EG2:O:JMm4>6I329oeO3
+R1
+w1738849894
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v
+!i122 3
+L0 1 814
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/datapath.v|
+!i113 0
+R7
+R8
+R2
+vdual_port_ram
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v
+R3
+!i10b 1
+!s100 BYfIP2B0Q18>9HJF1od`50
+I]b8V;Oz;^=1hJonH`PS:l3
+R1
+w1739136958
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v
+!i122 2
+L0 1 41
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/dual_port_ram.v|
+!i113 0
+R7
+R8
+R2
+vindex_comparator
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v
+Z9 !s110 1739147583
+!i10b 1
+!s100 :M7CBLiY:UVNVing3H<7k2
+IPVX1nJJ_XMjak]60LTZYC0
+R1
+w1730378800
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v
+!i122 10
+Z10 L0 40 31
+R4
+R5
+r1
+!s85 0
+31
+Z11 !s108 1739147583.000000
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/index_comparator.v|
+!i113 0
+R7
+R8
+R2
+vinteger_comparator
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_comparator.v
+R3
+!i10b 1
+!s100 =OZ<5mz5;BJ9Ol2BK81RM2
+I49Om[`AUHi``QK8no3JbJ3
+R1
+w1737983404
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_comparator.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_comparator.v
+!i122 6
+L0 40 35
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_comparator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_comparator.v|
+!i113 0
+R7
+R8
+R2
+vinteger_divider
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_divider.v
+R3
+!i10b 1
+!s100 YCZ[8UaRaLn;Mz?QB;YV70
+IXA>T?C;VbCKJTbkWJSULh3
+R1
+w1739049777
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_divider.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_divider.v
+!i122 7
+L0 40 39
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_divider.v|
+!i113 0
+R7
+R8
+R2
+vinteger_multiplier
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v
+R3
+!i10b 1
+!s100 G>48K[`o@z@0Im@oMnPP22
+IjOI7z[0oQGRc?]722l4lY1
+R1
+w1739049784
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v
+!i122 8
+R10
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_multiplier.v|
+!i113 0
+R7
+R8
+R2
+vinteger_parallel_adder
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v
+R9
+!i10b 1
+!s100 X2=Zcnj]bGOGQ2QV=h8ak2
+IaA>2lQWNDC<EJ]^UB<:380
+R1
+w1739049765
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v
+!i122 12
+L0 40 67
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/integer_parallel_adder.v|
+!i113 0
+R7
+R8
+R2
+vmult_2l01
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_2l01.v
+R9
+!i10b 1
+!s100 fE<;Y@Z5UfUH28F4^K4Ua2
+IMLo1RZ@i;dTCz2>E?^<G33
+R1
+w1737983498
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_2l01.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_2l01.v
+!i122 17
+L0 57 587
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_2l01.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_2l01.v|
+!i113 0
+R7
+Z12 !s92 -vlog01compat -work work +incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vmult_73n
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_73n.v
+R9
+!i10b 1
+!s100 ?J?[`=<hZj2bQ04c?57FF1
+IR97n>`l7U0LR]UT4oVnED0
+R1
+w1737983456
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_73n.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_73n.v
+!i122 16
+L0 29 21
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_73n.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/db/mult_73n.v|
+!i113 0
+R7
+R12
+R2
+vmy_clock
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/my_clock_sim/my_clock.vo
+!s110 1739147581
+!i10b 1
+!s100 WjWG1beK^d48fLn>;mcob0
+IX4>@?=Yz=5oP3=JdUo[>A2
+R1
+w1737983377
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/my_clock_sim/my_clock.vo
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/my_clock_sim/my_clock.vo
+!i122 0
+L0 32 264
+R4
+R5
+r1
+!s85 0
+31
+Z13 !s108 1739147581.000000
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/my_clock_sim/my_clock.vo|
+!s90 -reportprogress|300|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/my_clock_sim/my_clock.vo|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vparallel_divider
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v
+R9
+!i10b 1
+!s100 I63?dfE?P_KfE?8B`J>m]3
+In?=mdTE3NO0JGEVkTI=LO3
+R1
+w1732619639
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v
+!i122 13
+L0 1 140
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_divider.v|
+!i113 0
+R7
+R8
+R2
+vparallel_result_adjuster
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_result_adjuster.v
+R9
+!i10b 1
+!s100 O;Z8TVc1JcD74NJ?dVSAa1
+I3N`k69LRX68b@3Je:PNW72
+R1
+w1732202776
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_result_adjuster.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_result_adjuster.v
+!i122 15
+L0 1 218
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_result_adjuster.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/parallel_result_adjuster.v|
+!i113 0
+R7
+R8
+R2
+vpo_fpga_simulation
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v
+R3
+!i10b 1
+!s100 ;@0fzoEjXLzP]^:jSj7Q`2
+I@CMk<56Pngiicab^3S1iU1
+R1
+w1738873555
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v
+!i122 5
+L0 2 272
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/po_fpga_simulation.v|
+!i113 0
+R7
+R8
+R2
+vram_module
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/ram_module.v
+R9
+!i10b 1
+!s100 chOS7k685c4_OcC`Dd52S3
+IKj>d0fBPgO6;aZklf10jE0
+R1
+w1739136964
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/ram_module.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/ram_module.v
+!i122 11
+L0 1 115
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/ram_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/ram_module.v|
+!i113 0
+R7
+R8
+R2
+vsequential_loader
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v
+R9
+!i10b 1
+!s100 814bD<XAe;jLO7?ofNR[m0
+IN9EiL157^ZS6T<=PPLA6f2
+R1
+w1732208479
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v
+!i122 14
+L0 3 108
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/sequential_loader.v|
+!i113 0
+R7
+R8
+R2
+vsigned_adder_subtractor
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/signed_adder_substractor.v
+R3
+!i10b 1
+!s100 C558QdRUbJI5D@hJn?@H61
+IhFmT36__>5PG8mf=ND5We0
+R1
+w1728077326
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/signed_adder_substractor.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/signed_adder_substractor.v
+!i122 1
+L0 4 18
+R4
+R5
+r1
+!s85 0
+31
+R13
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/signed_adder_substractor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/signed_adder_substractor.v|
+!i113 0
+R7
+R8
+R2
+vsingle_port_ram
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v
+R9
+!i10b 1
+!s100 S`i:[<HMSH[bl[d8YTW=V2
+IzZ<kEfnL;7WORmHZh@_2a1
+R1
+w1739049665
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v
+!i122 9
+L0 40 65
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/single_port_ram.v|
+!i113 0
+R7
+R8
+R2
+vtb_po_fpga
+2D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/tb_po_fpga.v
+!s110 1739147584
+!i10b 1
+!s100 8NY[?Zf:dh6_Bjz_:R;V33
+I;88zKc7mn^F<g6U2Lk4ga0
+R1
+w1739146396
+8D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/tb_po_fpga.v
+FD:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/tb_po_fpga.v
+!i122 18
+L0 3 348
+R4
+R5
+r1
+!s85 0
+31
+!s108 1739147584.000000
+!s107 D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/tb_po_fpga.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning|D:/QuartusProjects/26_warning_original_DE1_SOC_valid_cleaning/tb_po_fpga.v|
+!i113 0
+R7
+R8
+R2

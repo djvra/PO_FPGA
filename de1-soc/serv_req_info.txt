@@ -1,0 +1,64 @@
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4839 megabytes used)</error>
+	<date>Fri Sep  6 21:23:59 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4876 megabytes used)</error>
+	<date>Fri Sep  6 21:23:59 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4883 megabytes used)</error>
+	<date>Fri Sep  6 21:24:00 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4919 megabytes used)</error>
+	<date>Fri Sep  6 21:24:00 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4922 megabytes used)</error>
+	<date>Fri Sep  6 21:24:00 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4925 megabytes used)</error>
+	<date>Fri Sep  6 21:24:00 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4903 megabytes used)</error>
+	<date>Fri Sep  6 21:48:44 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus_map.exe (4957 megabytes used)</error>
+	<date>Fri Sep  6 21:48:44 2024</date>
+	<version>Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition</version>
+</internal_error>
+

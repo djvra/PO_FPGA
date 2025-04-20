@@ -1,0 +1,456 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/ELIF/Desktop/PO/fpga/26_warning/simulation/questa
+T_opt
+!s110 1737385009
+VGeY9Ah4@nfchPNA^:hn>]2
+04 10 4 work tb_po_fpga fast 0
+=1-1831bf4c2acd-678e6431-51-27d0
+R0
+!s12b OEM100
+!s124 OEM10U38 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vcontrol_unit
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v
+Z3 !s110 1737385006
+!i10b 1
+!s100 AC3f=Z6ng[`:jASIAZ1Z91
+ImMMbaeNY]PEk;Ra5nLmz51
+R1
+w1737383196
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v
+!i122 3
+L0 1 1604
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z6 !s108 1737385006.000000
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdatapath
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v
+R3
+!i10b 1
+!s100 B4I<eDFM1Gj?ZWIP2YDL22
+I=YU6jkDdi^UMOXJgASnom3
+R1
+w1732391001
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v
+!i122 2
+L0 1 852
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v|
+!i113 0
+R7
+R8
+R2
+vdual_port_ram
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v
+Z9 !s110 1737385007
+!i10b 1
+!s100 OjNRBKRMSZ<351=:3g`oZ0
+If4g4o@_0?cFF@IzZXcNHo3
+R1
+w1736978362
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v
+!i122 15
+L0 1 41
+R4
+R5
+r1
+!s85 0
+31
+Z10 !s108 1737385007.000000
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v|
+!i113 0
+R7
+R8
+R2
+vindex_comparator
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v
+R9
+!i10b 1
+!s100 :M7CBLiY:UVNVing3H<7k2
+ITkJ6gnD0[ehUgh8ihccXJ2
+R1
+w1730378800
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v
+!i122 9
+Z11 L0 40 31
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v|
+!i113 0
+R7
+R8
+R2
+vinteger_comparator
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_comparator.v
+R3
+!i10b 1
+!s100 =OZ<5mz5;BJ9Ol2BK81RM2
+I`53<LIajO2VQi<m4SHDY32
+R1
+w1732391022
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_comparator.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_comparator.v
+!i122 5
+L0 40 35
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_comparator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_comparator.v|
+!i113 0
+R7
+R8
+R2
+vinteger_divider
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_divider.v
+R3
+!i10b 1
+!s100 YCZ[8UaRaLn;Mz?QB;YV70
+IfEE?]84BG[I=3Qf7[Yk493
+R1
+w1732391017
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_divider.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_divider.v
+!i122 6
+L0 40 39
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_divider.v|
+!i113 0
+R7
+R8
+R2
+vinteger_multiplier
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v
+R3
+!i10b 1
+!s100 G>48K[`o@z@0Im@oMnPP22
+IK[Xo1YI>bA`Q8NG6dZQEl0
+R1
+w1732391038
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v
+!i122 7
+R11
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v|
+!i113 0
+R7
+R8
+R2
+vinteger_parallel_adder
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v
+R9
+!i10b 1
+!s100 X2=Zcnj]bGOGQ2QV=h8ak2
+IB05Y0djW@g=:KZ_mNbRhC2
+R1
+w1732391032
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v
+!i122 10
+L0 40 67
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v|
+!i113 0
+R7
+R8
+R2
+vmult_73n
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/db/mult_73n.v
+R9
+!i10b 1
+!s100 ?J?[`=<hZj2bQ04c?57FF1
+IfTQjf42M?F0b>ZJHbm0z<0
+R1
+w1728509801
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/db/mult_73n.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/db/mult_73n.v
+!i122 14
+L0 29 21
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/db/mult_73n.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning/db|C:/Users/ELIF/Desktop/PO/fpga/26_warning/db/mult_73n.v|
+!i113 0
+R7
+!s92 -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vmy_clock
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/my_clock_sim/my_clock.vo
+R3
+!i10b 1
+!s100 WjWG1beK^d48fLn>;mcob0
+Iom72dFgiZJJ>LM^`9QeIZ2
+R1
+w1732470270
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/my_clock_sim/my_clock.vo
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/my_clock_sim/my_clock.vo
+!i122 0
+L0 32 264
+R4
+R5
+r1
+!s85 0
+31
+!s108 1737385005.000000
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/my_clock_sim/my_clock.vo|
+!s90 -reportprogress|300|C:/Users/ELIF/Desktop/PO/fpga/26_warning/my_clock_sim/my_clock.vo|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vparallel_divider
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v
+R9
+!i10b 1
+!s100 I63?dfE?P_KfE?8B`J>m]3
+IA2QFXXS3kUJ25mf^6og]83
+R1
+w1732619639
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v
+!i122 11
+L0 1 140
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v|
+!i113 0
+R7
+R8
+R2
+vparallel_result_adjuster
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_result_adjuster.v
+R9
+!i10b 1
+!s100 O;Z8TVc1JcD74NJ?dVSAa1
+Id:io6MQFJ9QBXIjU08oiG1
+R1
+w1732202776
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_result_adjuster.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_result_adjuster.v
+!i122 13
+L0 1 218
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_result_adjuster.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_result_adjuster.v|
+!i113 0
+R7
+R8
+R2
+vpo_fpga_simulation
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v
+R3
+!i10b 1
+!s100 3Nd<olX;Vo:YhCh>]eH`T0
+IR8BRRYD`NHg7b<aE4ROLF2
+R1
+w1732289669
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v
+!i122 4
+L0 2 272
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v|
+!i113 0
+R7
+R8
+R2
+vram_module
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/ram_module.v
+Z12 !s110 1737385008
+!i10b 1
+!s100 _DCQRJRl2`A<]njz41PLB2
+IKG3XDPkAK;zcn^CZjGKBH2
+R1
+w1736978356
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/ram_module.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/ram_module.v
+!i122 16
+L0 1 115
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/ram_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/ram_module.v|
+!i113 0
+R7
+R8
+R2
+vsequential_loader
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v
+R9
+!i10b 1
+!s100 814bD<XAe;jLO7?ofNR[m0
+IbWG>aN`c>K^WkPik_PN`@1
+R1
+w1732208479
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v
+!i122 12
+L0 3 108
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v|
+!i113 0
+R7
+R8
+R2
+vsigned_adder_subtractor
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/signed_adder_substractor.v
+R3
+!i10b 1
+!s100 C558QdRUbJI5D@hJn?@H61
+IzlW`fYN1^1o8KTj:KM4A22
+R1
+w1728077326
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/signed_adder_substractor.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/signed_adder_substractor.v
+!i122 1
+L0 4 18
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/signed_adder_substractor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/signed_adder_substractor.v|
+!i113 0
+R7
+R8
+R2
+vsingle_port_ram
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v
+R9
+!i10b 1
+!s100 izoFijK>23Nhe0AmlRUc>0
+IN0U3iOFNA=0ZdX@79<dT62
+R1
+w1732391027
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v
+!i122 8
+L0 40 65
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v|
+!i113 0
+R7
+R8
+R2
+vtb_po_fpga
+2C:/Users/ELIF/Desktop/PO/fpga/26_warning/tb_po_fpga.v
+R12
+!i10b 1
+!s100 WXW6WHK@1amLGTj8[P3?P3
+Io^P^]z1C^A^69YcU>KUHn2
+R1
+w1737384734
+8C:/Users/ELIF/Desktop/PO/fpga/26_warning/tb_po_fpga.v
+FC:/Users/ELIF/Desktop/PO/fpga/26_warning/tb_po_fpga.v
+!i122 17
+L0 3 348
+R4
+R5
+r1
+!s85 0
+31
+!s108 1737385008.000000
+!s107 C:/Users/ELIF/Desktop/PO/fpga/26_warning/tb_po_fpga.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning|C:/Users/ELIF/Desktop/PO/fpga/26_warning/tb_po_fpga.v|
+!i113 0
+R7
+R8
+R2

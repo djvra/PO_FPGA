@@ -1,0 +1,32 @@
+// dumps last 1000 points so that we can see it on the In System Memory Content Editor
+
+module sequential_loader #(
+    parameter ROWS = 12                // Number of data elements
+)(
+    input wire clk,                     // Clock signal
+    input wire reset,                   // Reset signal
+    input wire load_enable,             // Signal to enable loading of data
+    input wire [31:0] data_in [ROWS-1:0],   // Array of inputs (32-bit each, size ROWS)
+    output reg [31:0] memory [ROWS-1:0],    // Memory array to store data (32-bit each, size ROWS)
+    output reg done                     // Signal to indicate loading is complete
+);
+
+    reg [$clog2(ROWS)-1:0] index;  // Counter for indexing (sized based on ROWS)
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            index <= 0;
+            done <= 1'b0;
+        end else if (load_enable) begin
+            // Load data sequentially on each clock cycle
+            if (index < ROWS) begin
+                memory[index] <= data_in[index];
+                index <= index + 1;
+                done <= 1'b0;
+            end else begin
+                done <= 1'b1;  // Set done when all data is loaded
+            end
+        end
+    end
+
+endmodule

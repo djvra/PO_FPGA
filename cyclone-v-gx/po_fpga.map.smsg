@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at control_unit.v(249): always construct contains both blocking and non-blocking assignments File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v Line: 249
+Info (10281): Verilog HDL Declaration information at control_unit.v(5): object "done" differs only in case from object "DONE" in the same scope File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v Line: 5

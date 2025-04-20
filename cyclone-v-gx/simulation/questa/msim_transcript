@@ -1,0 +1,986 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do po_fpga_run_msim_rtl_verilog.do
+# if ![file isdirectory po_fpga_iputf_libs] {
+# 	file mkdir po_fpga_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "C:/Users/ELIF/Desktop/PO/fpga/26_warning/my_clock_sim/my_clock.vo"
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:45 on Jan 20,2025
+# vlog -reportprogress 300 C:/Users/ELIF/Desktop/PO/fpga/26_warning/my_clock_sim/my_clock.vo 
+# -- Compiling module my_clock
+# 
+# Top level modules:
+# 	my_clock
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/signed_adder_substractor.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/signed_adder_substractor.v 
+# -- Compiling module signed_adder_subtractor
+# 
+# Top level modules:
+# 	signed_adder_subtractor
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v 
+# -- Compiling module po_fpga_simulation
+# 
+# Top level modules:
+# 	po_fpga_simulation
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_comparator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_comparator.v 
+# -- Compiling module integer_comparator
+# 
+# Top level modules:
+# 	integer_comparator
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_divider.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_divider.v 
+# -- Compiling module integer_divider
+# 
+# Top level modules:
+# 	integer_divider
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v 
+# -- Compiling module integer_multiplier
+# 
+# Top level modules:
+# 	integer_multiplier
+# End time: 17:56:46 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:46 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v 
+# -- Compiling module single_port_ram
+# 
+# Top level modules:
+# 	single_port_ram
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v 
+# -- Compiling module index_comparator
+# 
+# Top level modules:
+# 	index_comparator
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v 
+# -- Compiling module integer_parallel_adder
+# 
+# Top level modules:
+# 	integer_parallel_adder
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v 
+# -- Compiling module parallel_divider
+# 
+# Top level modules:
+# 	parallel_divider
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v 
+# -- Compiling module sequential_loader
+# 
+# Top level modules:
+# 	sequential_loader
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_result_adjuster.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_result_adjuster.v 
+# -- Compiling module parallel_result_adjuster
+# 
+# Top level modules:
+# 	parallel_result_adjuster
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning/db {C:/Users/ELIF/Desktop/PO/fpga/26_warning/db/mult_73n.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning/db" C:/Users/ELIF/Desktop/PO/fpga/26_warning/db/mult_73n.v 
+# -- Compiling module mult_73n
+# 
+# Top level modules:
+# 	mult_73n
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v 
+# -- Compiling module dual_port_ram
+# 
+# Top level modules:
+# 	dual_port_ram
+# End time: 17:56:47 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/ram_module.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:47 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/ram_module.v 
+# -- Compiling module ram_module
+# 
+# Top level modules:
+# 	ram_module
+# End time: 17:56:48 on Jan 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning {C:/Users/ELIF/Desktop/PO/fpga/26_warning/tb_po_fpga.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:56:48 on Jan 20,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ELIF/Desktop/PO/fpga/26_warning" C:/Users/ELIF/Desktop/PO/fpga/26_warning/tb_po_fpga.v 
+# -- Compiling module tb_po_fpga
+# 
+# Top level modules:
+# 	tb_po_fpga
+# End time: 17:56:48 on Jan 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_po_fpga
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_po_fpga 
+# Start time: 17:56:48 on Jan 20,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(57): (vopt-2685) [TFMPC] - Too few port connections for 'cu'.  Expected 91, found 89.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(57): (vopt-2718) [TFMPC] - Missing connection for port 'state_count_wire'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(57): (vopt-2718) [TFMPC] - Missing connection for port 'current_state_test'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(165): (vopt-2685) [TFMPC] - Too few port connections for 'dp'.  Expected 93, found 89.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(165): (vopt-2718) [TFMPC] - Missing connection for port 'result_point_out'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(165): (vopt-2718) [TFMPC] - Missing connection for port 'fpga_total_point_count'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(165): (vopt-2718) [TFMPC] - Missing connection for port 'result_point_j'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/po_fpga_simulation.v(165): (vopt-2718) [TFMPC] - Missing connection for port 'result_point_i'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ram_module(fast)".
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(34): (vopt-2685) [TFMPC] - Too few port connections for 'result_point_ISMCE'.  Expected 5, found 4.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(34): (vopt-2718) [TFMPC] - Missing connection for port 'q'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "sequential_loader(fast)".
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(322): (vopt-2685) [TFMPC] - Too few port connections for 'pd'.  Expected 37, found 36.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(322): (vopt-2718) [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(373): (vopt-2685) [TFMPC] - Too few port connections for 'parallel_res_adj'.  Expected 31, found 28.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(373): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(373): (vopt-2718) [TFMPC] - Missing connection for port 'inner_Res11_out'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(373): (vopt-2718) [TFMPC] - Missing connection for port 'inner_Res11'.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(414): (vopt-2685) [TFMPC] - Too few port connections for 'seq_loader'.  Expected 16, found 15.
+# ** Warning: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v(414): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "control_unit(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "parallel_result_adjuster(fast)".
+# ** Warning: $MODEL_TECH/../intel/verilog/src/altera_mf.v(51598): (vopt-8630) Infinity results from division operation.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=20.
+# Loading work.tb_po_fpga(fast)
+# Loading work.po_fpga_simulation(fast)
+# Loading work.control_unit(fast)
+# Loading work.datapath(fast)
+# Loading work.dual_port_ram(fast)
+# Loading work.ram_module(fast)
+# Loading work.integer_multiplier(fast)
+# Loading lpm_ver.lpm_mult(fast)
+# Loading lpm_ver.LPM_HINT_EVALUATION(fast)
+# Loading work.signed_adder_subtractor(fast)
+# Loading work.integer_comparator(fast)
+# Loading lpm_ver.lpm_compare(fast)
+# Loading work.index_comparator(fast)
+# Loading lpm_ver.lpm_compare(fast__1)
+# Loading work.integer_divider(fast)
+# Loading lpm_ver.lpm_divide(fast)
+# Loading work.integer_parallel_adder(fast)
+# Loading altera_mf_ver.parallel_add(fast)
+# Loading work.parallel_divider(fast)
+# Loading work.parallel_result_adjuster(fast)
+# Loading work.sequential_loader(fast)
+# Loading work.single_port_ram(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'ROWS'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/input_array File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (64) for port 'result'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/int_mult File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'datab'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v(42).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/j_index_comparator File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 273
+# ** Warning: (vsim-3015) [PCDPC] - Port size (68) does not match connection size (64) for port 'result'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v(53).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/int_parallel_add File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 300
+# ** Warning: (vsim-3015) [PCDPC] - Port size (40) does not match connection size (64) for port 'den'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/pd File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 322
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (64) for port 'point_count'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in0'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in1'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in2'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in3'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in4'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in5'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in6'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in7'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in8'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(18).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in9'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in10'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v Line: 34
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v Line: 34
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE/altsyncram_component File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v Line: 63
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE/altsyncram_component/m_default/altsyncram_inst File: c:/intelfpga_lite/23.1std/questa_fse/win64/../intel/verilog/src/altera_mf.v Line: 47806
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Test failed: done signal not asserted.
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 11
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[2] = 0
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 11
+# q_hat[2] = 11
+# q_hat[2] = 11
+# q_hat[3] = 0
+# q_hat[3] = 0
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 13
+# q_hat[3] = 13
+# q_hat[4] = 0
+# q_hat[4] = 0
+# q_hat[4] = -30
+# q_hat[4] = -26
+# q_hat[4] = -26
+# q_hat[4] = -26
+# q_hat[4] = -19
+# q_hat[4] = -19
+# q_hat[4] = -19
+# q_hat[4] = -109
+# q_hat[4] = -109
+# q_hat[5] = 0
+# q_hat[5] = -18
+# q_hat[5] = -18
+# q_hat[5] = -18
+# q_hat[5] = -13
+# q_hat[5] = -13
+# q_hat[5] = -13
+# q_hat[5] = -13
+# q_hat[5] = -85
+# q_hat[5] = -85
+# q_hat[5] = -85
+# q_hat[6] = 0
+# q_hat[6] = 0
+# q_hat[6] = 0
+# q_hat[6] = 0
+# q_hat[6] = 0
+# q_hat[6] = 6
+# q_hat[6] = 6
+# q_hat[6] = 14
+# q_hat[6] = 14
+# q_hat[6] = 14
+# q_hat[6] = 14
+# q_hat[7] = 0
+# q_hat[7] = 0
+# q_hat[7] = 630
+# q_hat[7] = 542
+# q_hat[7] = 542
+# q_hat[7] = 542
+# q_hat[7] = 500
+# q_hat[7] = 500
+# q_hat[7] = 500
+# q_hat[7] = 2390
+# q_hat[7] = 2390
+# q_hat[8] = 0
+# q_hat[8] = 630
+# q_hat[8] = 57750
+# q_hat[8] = 49770
+# q_hat[8] = 49590
+# q_hat[8] = 49566
+# q_hat[8] = 45786
+# q_hat[8] = 45762
+# q_hat[8] = 48282
+# q_hat[8] = 219642
+# q_hat[8] = 219642
+# q_hat[9] = 0
+# q_hat[9] = -8820
+# q_hat[9] = -2807700
+# q_hat[9] = -2416680
+# q_hat[9] = -2414160
+# q_hat[9] = -2412960
+# q_hat[9] = -2227740
+# q_hat[9] = -2226540
+# q_hat[9] = -2261820
+# q_hat[9] = -10658460
+# q_hat[9] = -10658460
+# q_hat[10] = 0
+# q_hat[10] = -123480
+# q_hat[10] = -41249880
+# q_hat[10] = -35504280
+# q_hat[10] = -35469000
+# q_hat[10] = -35451360
+# q_hat[10] = -32729760
+# q_hat[10] = -32712120
+# q_hat[10] = -33206040
+# q_hat[10] = -156585240
+# q_hat[10] = -156585240
+# prime_diagonals[0] = 2520
+# prime_diagonals[1] = 2520
+# prime_diagonals[2] = 2520
+# prime_diagonals[3] = 2520
+# prime_diagonals[4] = 2520
+# prime_diagonals[5] = 2520
+# prime_diagonals[6] = 1260
+# prime_diagonals[7] = 1260
+# prime_diagonals[8] = 420
+# prime_diagonals[9] = 42
+# prime_diagonals[10] = 1
+# q_summand[0] = 2520
+# q_summand[1] = 5040
+# q_summand[2] = 7560
+# q_summand[3] = 10080
+# q_summand[4] = 12600
+# q_summand[5] = 15120
+# q_summand[6] = 17640
+# q_summand[7] = 20160
+# q_summand[8] = 22680
+# q_summand[9] = 25200
+# q_summand[10] = 27720
+# q_trans[0] = -27720
+# q_trans[0] = -27720
+# q_trans[0] = -27720
+# q_trans[0] = 332640
+# q_trans[0] = 27525960
+# q_trans[0] = 27525960
+# q_trans[0] = 27525960
+# q_trans[0] = -9611965440
+# q_trans[0] = -4782977337600
+# q_trans[0] = 250015268321280
+# q_trans[0] = 0
+# q_trans[1] = 0
+# q_trans[1] = 0
+# q_trans[1] = 27720
+# q_trans[1] = -5040
+# q_trans[1] = -2477160
+# q_trans[1] = -3333960
+# q_trans[1] = -3333960
+# q_trans[1] = 872983440
+# q_trans[1] = 435737786400
+# q_trans[1] = -22772504623680
+# q_trans[1] = 0
+# q_trans[2] = 0
+# q_trans[2] = 0
+# q_trans[2] = -27720
+# q_trans[2] = -27720
+# q_trans[2] = -27720
+# q_trans[2] = 829080
+# q_trans[2] = 846720
+# q_trans[2] = 846720
+# q_trans[2] = 32011471800
+# q_trans[2] = -1682508403800
+# q_trans[2] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = -274680
+# q_trans[3] = -274680
+# q_trans[3] = -292320
+# q_trans[3] = 78004080
+# q_trans[3] = 5889731400
+# q_trans[3] = -302992439400
+# q_trans[3] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+# q_trans[4] = 274680
+# q_trans[4] = 274680
+# q_trans[4] = 257040
+# q_trans[4] = -78039360
+# q_trans[4] = -82733716800
+# q_trans[4] = 4331147738400
+# q_trans[4] = 0
+# q_trans[5] = 0
+# q_trans[5] = 0
+# q_trans[5] = 0
+# q_trans[5] = 0
+# q_trans[5] = 0
+# q_trans[5] = 1499400
+# q_trans[5] = 1517040
+# q_trans[5] = 1517040
+# q_trans[5] = 42251852160
+# q_trans[5] = -2222884067040
+# q_trans[5] = 0
+# q_trans[6] = 0
+# q_trans[6] = 0
+# q_trans[6] = 0
+# q_trans[6] = 0
+# q_trans[6] = -5768280
+# q_trans[6] = -7267680
+# q_trans[6] = -7267680
+# q_trans[6] = 2046507120
+# q_trans[6] = 1020759281640
+# q_trans[6] = -53349217608960
+# q_trans[6] = 0
+# q_trans[7] = 0
+# q_trans[7] = 0
+# q_trans[7] = 0
+# q_trans[7] = -98280
+# q_trans[7] = -2570400
+# q_trans[7] = -2570400
+# q_trans[7] = -2570400
+# q_trans[7] = 864712800
+# q_trans[7] = 430286787000
+# q_trans[7] = -22491903873600
+# q_trans[7] = 0
+# q_trans[8] = 0
+# q_trans[8] = 0
+# q_trans[8] = -110880
+# q_trans[8] = -12600
+# q_trans[8] = 8227800
+# q_trans[8] = 12083400
+# q_trans[8] = 12083400
+# q_trans[8] = -2908974600
+# q_trans[8] = -1453534563600
+# q_trans[8] = 75959499924000
+# q_trans[8] = 0
+# q_trans[9] = 0
+# q_trans[9] = 2520
+# q_trans[9] = 113400
+# q_trans[9] = 113400
+# q_trans[9] = 113400
+# q_trans[9] = -3742200
+# q_trans[9] = -3742200
+# q_trans[9] = -3742200
+# q_trans[9] = 4147491600
+# q_trans[9] = -197297402400
+# q_trans[9] = 0
+# q_trans[10] = 0
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+add wave -position end  sim:/tb_po_fpga/uut/cu/current_state
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=20.
+# Loading work.tb_po_fpga(fast)
+# Loading work.po_fpga_simulation(fast)
+# Loading work.control_unit(fast)
+# Loading work.datapath(fast)
+# Loading work.dual_port_ram(fast)
+# Loading work.ram_module(fast)
+# Loading work.integer_multiplier(fast)
+# Loading lpm_ver.lpm_mult(fast)
+# Loading lpm_ver.LPM_HINT_EVALUATION(fast)
+# Loading work.signed_adder_subtractor(fast)
+# Loading work.integer_comparator(fast)
+# Loading lpm_ver.lpm_compare(fast)
+# Loading work.index_comparator(fast)
+# Loading lpm_ver.lpm_compare(fast__1)
+# Loading work.integer_divider(fast)
+# Loading lpm_ver.lpm_divide(fast)
+# Loading work.integer_parallel_adder(fast)
+# Loading altera_mf_ver.parallel_add(fast)
+# Loading work.parallel_divider(fast)
+# Loading work.parallel_result_adjuster(fast)
+# Loading work.sequential_loader(fast)
+# Loading work.single_port_ram(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'ROWS'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/dual_port_ram.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/input_array File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (128) does not match connection size (64) for port 'result'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_multiplier.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/int_mult File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'datab'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/index_comparator.v(42).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/j_index_comparator File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 273
+# ** Warning: (vsim-3015) [PCDPC] - Port size (68) does not match connection size (64) for port 'result'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/integer_parallel_adder.v(53).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/int_parallel_add File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 300
+# ** Warning: (vsim-3015) [PCDPC] - Port size (40) does not match connection size (64) for port 'den'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/parallel_divider.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/pd File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 322
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (64) for port 'point_count'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in0'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in1'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in2'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in3'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in4'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in5'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in6'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in7'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in8'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(18).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in9'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (40) for port 'data_in10'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/datapath.v Line: 414
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v Line: 34
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data'. The port definition is at: C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/sequential_loader.v Line: 34
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE/altsyncram_component File: C:/Users/ELIF/Desktop/PO/fpga/26_warning/single_port_ram.v Line: 63
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /tb_po_fpga/uut/dp/seq_loader/result_point_ISMCE/altsyncram_component/m_default/altsyncram_inst File: c:/intelfpga_lite/23.1std/questa_fse/win64/../intel/verilog/src/altera_mf.v Line: 47806
+run
+# Test failed: done signal not asserted.
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+run
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 0
+# q_hat[0] = 11
+run
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+run
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+# q_hat[1] = 1
+run
+# q_hat[2] = 0
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+# q_hat[2] = 2
+run
+# q_hat[2] = 11
+# q_hat[2] = 11
+# q_hat[2] = 11
+# q_hat[3] = 0
+# q_hat[3] = 0
+run
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 3
+# q_hat[3] = 13
+run
+# q_hat[3] = 13
+# q_hat[4] = 0
+# q_hat[4] = 0
+# q_hat[4] = -30
+# q_hat[4] = -26
+run
+# q_hat[4] = -26
+# q_hat[4] = -26
+# q_hat[4] = -19
+# q_hat[4] = -19
+# q_hat[4] = -19
+# q_hat[4] = -109
+# q_hat[4] = -109
+run
+# q_hat[5] = 0
+# q_hat[5] = -18
+# q_hat[5] = -18
+# q_hat[5] = -18
+# q_hat[5] = -13
+# q_hat[5] = -13
+# q_hat[5] = -13
+run
+# q_hat[5] = -13
+# q_hat[5] = -85
+# q_hat[5] = -85
+# q_hat[5] = -85
+# q_hat[6] = 0
+run
+# q_hat[6] = 0
+# q_hat[6] = 0
+# q_hat[6] = 0
+# q_hat[6] = 0
+# q_hat[6] = 6
+# q_hat[6] = 6
+# q_hat[6] = 14
+# q_hat[6] = 14
+run
+# q_hat[6] = 14
+# q_hat[6] = 14
+# q_hat[7] = 0
+# q_hat[7] = 0
+# q_hat[7] = 630
+run
+# q_hat[7] = 542
+# q_hat[7] = 542
+# q_hat[7] = 542
+# q_hat[7] = 500
+# q_hat[7] = 500
+# q_hat[7] = 500
+# q_hat[7] = 2390
+# q_hat[7] = 2390
+run
+# q_hat[8] = 0
+# q_hat[8] = 630
+# q_hat[8] = 57750
+# q_hat[8] = 49770
+# q_hat[8] = 49590
+# q_hat[8] = 49566
+run
+# q_hat[8] = 45786
+# q_hat[8] = 45762
+# q_hat[8] = 48282
+# q_hat[8] = 219642
+# q_hat[8] = 219642
+run
+# q_hat[9] = 0
+# q_hat[9] = -8820
+# q_hat[9] = -2807700
+# q_hat[9] = -2416680
+# q_hat[9] = -2414160
+# q_hat[9] = -2412960
+# q_hat[9] = -2227740
+# q_hat[9] = -2226540
+run
+# q_hat[9] = -2261820
+# q_hat[9] = -10658460
+# q_hat[9] = -10658460
+# q_hat[10] = 0
+# q_hat[10] = -123480
+# q_hat[10] = -41249880
+run
+# q_hat[10] = -35504280
+# q_hat[10] = -35469000
+# q_hat[10] = -35451360
+# q_hat[10] = -32729760
+# q_hat[10] = -32712120
+# q_hat[10] = -33206040
+# q_hat[10] = -156585240
+# q_hat[10] = -156585240
+run
+# prime_diagonals[0] = 2520
+# prime_diagonals[1] = 2520
+# prime_diagonals[2] = 2520
+# prime_diagonals[3] = 2520
+# prime_diagonals[4] = 2520
+# prime_diagonals[5] = 2520
+# prime_diagonals[6] = 1260
+# prime_diagonals[7] = 1260
+# prime_diagonals[8] = 420
+# prime_diagonals[9] = 42
+# prime_diagonals[10] = 1
+# q_summand[0] = 2520
+# q_summand[1] = 5040
+# q_summand[2] = 7560
+# q_summand[3] = 10080
+# q_summand[4] = 12600
+# q_summand[5] = 15120
+# q_summand[6] = 17640
+# q_summand[7] = 20160
+# q_summand[8] = 22680
+# q_summand[9] = 25200
+# q_summand[10] = 27720
+# q_trans[0] = -27720
+# q_trans[0] = -27720
+# q_trans[0] = -27720
+# q_trans[0] = 332640
+# q_trans[0] = 27525960
+# q_trans[0] = 27525960
+# q_trans[0] = 27525960
+# q_trans[0] = -9611965440
+# q_trans[0] = -4782977337600
+run
+# q_trans[0] = 250015268321280
+# q_trans[0] = 0
+# q_trans[1] = 0
+# q_trans[1] = 0
+# q_trans[1] = 27720
+# q_trans[1] = -5040
+# q_trans[1] = -2477160
+# q_trans[1] = -3333960
+# q_trans[1] = -3333960
+# q_trans[1] = 872983440
+run
+# q_trans[1] = 435737786400
+# q_trans[1] = -22772504623680
+# q_trans[1] = 0
+# q_trans[2] = 0
+# q_trans[2] = 0
+# q_trans[2] = -27720
+# q_trans[2] = -27720
+# q_trans[2] = -27720
+# q_trans[2] = 829080
+run
+# q_trans[2] = 846720
+# q_trans[2] = 846720
+# q_trans[2] = 32011471800
+# q_trans[2] = -1682508403800
+# q_trans[2] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = 0
+# q_trans[3] = -274680
+run
+# q_trans[3] = -274680
+# q_trans[3] = -292320
+# q_trans[3] = 78004080
+# q_trans[3] = 5889731400
+# q_trans[3] = -302992439400
+# q_trans[3] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+# q_trans[4] = 0
+run
+# q_trans[4] = 274680
+# q_trans[4] = 274680
+# q_trans[4] = 257040
+# q_trans[4] = -78039360
+# q_trans[4] = -82733716800
+# q_trans[4] = 4331147738400
+# q_trans[4] = 0
+# q_trans[5] = 0
+# q_trans[5] = 0
+run
+# q_trans[5] = 0
+# q_trans[5] = 0
+# q_trans[5] = 0
+# q_trans[5] = 1499400
+# q_trans[5] = 1517040
+# q_trans[5] = 1517040
+# q_trans[5] = 42251852160
+# q_trans[5] = -2222884067040
+# q_trans[5] = 0
+# q_trans[6] = 0
+run
+# q_trans[6] = 0
+# q_trans[6] = 0
+# q_trans[6] = 0
+# q_trans[6] = -5768280
+# q_trans[6] = -7267680
+# q_trans[6] = -7267680
+# q_trans[6] = 2046507120
+# q_trans[6] = 1020759281640
+# q_trans[6] = -53349217608960
+# q_trans[6] = 0
+run
+# q_trans[7] = 0
+# q_trans[7] = 0
+# q_trans[7] = 0
+# q_trans[7] = -98280
+# q_trans[7] = -2570400
+# q_trans[7] = -2570400
+# q_trans[7] = -2570400
+# q_trans[7] = 864712800
+# q_trans[7] = 430286787000
+run
+# q_trans[7] = -22491903873600
+# q_trans[7] = 0
+# q_trans[8] = 0
+# q_trans[8] = 0
+# q_trans[8] = -110880
+# q_trans[8] = -12600
+# q_trans[8] = 8227800
+# q_trans[8] = 12083400
+# q_trans[8] = 12083400
+# q_trans[8] = -2908974600
+run
+# q_trans[8] = -1453534563600
+# q_trans[8] = 75959499924000
+# q_trans[8] = 0
+# q_trans[9] = 0
+# q_trans[9] = 2520
+# q_trans[9] = 113400
+# q_trans[9] = 113400
+# q_trans[9] = 113400
+# q_trans[9] = -3742200
+# q_trans[9] = -3742200
+run
+# q_trans[9] = -3742200
+# q_trans[9] = 4147491600
+# q_trans[9] = -197297402400
+# q_trans[9] = 0
+# q_trans[10] = 0
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+run
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+# q_trans[10] = -2520
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 18:00:53 on Jan 20,2025, Elapsed time: 0:04:05
+# Errors: 0, Warnings: 41
