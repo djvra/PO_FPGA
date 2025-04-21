@@ -1,0 +1,49 @@
+data3.txt
+each_cone_size: 36 (bu hesaplaniyor)
+input_array_size: 108 (bu sadece tek bir yerde kullanilmis gerek yok kullanmaya)
+number_of_cone: 3 (direkt bunu koy)
+
+data6.txt -> 119 points
+data7.txt -> 719 points
+data8.txt -> 5039 points (13af)
+data9.txt -> 40319 points (9d7f), pll 60 mhz çalışmadı, pll 50 mhz çalıştı
+data10.txt -> 362879 (5897F) points olmalı ama bu 50mhz de 30247 (7627) çıkıyor yanlış
+pll 3, 40, 50 mhz de doğru çıkıyor
+pll 60 mhzde çalışmadı
+
+data11.txt -> 3628799 (375EFF) 3, 25, 40 mhzde çalışıyor
+divideri 32 bit dividerla 40 mhzde doğru çalıştı
+divider 32 bit 60 MHzde çalıştı (pll)
+boardun kendi clockunu bağladığımda 50 mhz çalışmıyor, pllde çalışıyor
+
+
+PIPELINESIZ 32bit divider (pinleri 64 bit kalmış)
+input 11
+40 MHz -> çalıştı
+50 Mhz -> çalışmadı, sonsuza kadar saymaya devam ediyor
+
+PIPELINESIZ 32bit divider pinler 32 bit
+input 11
+40 MHz -> çalıştı
+50 MHz -> çalışmadı, sonsuza kadar saymaya devam ediyor
+
+PIPELINLI 3 cycle pipeline, 32bit divider pinler 32 bit
+input 11
+70 MHz -> çalıştı
+80 MHz -> çalışmadı
+
+PIPELINLI 5 cycle pipeline, 32bit divider pinler 32 bit
+input 11
+70 MHz -> çalıştı
+80 MHz -> çalıştı
+90 MHz -> çalışmadı
+
+PIPELINLI 7 cycle pipeline, 32bit divider pinler 32 bit
+input 11
+80 MHz -> çalıştı 
+90 MHz -> çalışmadı
+
+PIPELINLI 9 cycle pipeline, 32bit divider pinler 32 bit
+input 11
+90 MHz -> çalıştı
+100 MHz -> çalışmadı
